@@ -1,3 +1,12 @@
+# Challenge React.js for Workana
+
+1. Install dependencies:
+npm install
+
+2. Run the project:
+npm start
+
+
 # DO NOT PULL TO THIS REPOSITORY
 ### react-challenge
 
