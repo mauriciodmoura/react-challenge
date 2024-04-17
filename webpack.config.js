@@ -19,16 +19,24 @@ module.exports = (env, argv) => {
           use: {
             loader: 'babel-loader'
           }
+        },
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader']
         }
       ]
     },
+    resolve: {
+      extensions: ['.js', '.jsx', '.css'],
+    },
     plugins: [
       new HtmlWebPackPlugin({
-        template: "./src/index.html",
+        template: "./public/index.html",
         filename: "./index.html"
       })
     ],
     devServer: {
+      hot: true,
       static: {
         directory: path.join(__dirname, 'public'),
       },
